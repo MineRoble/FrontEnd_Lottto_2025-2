@@ -4,13 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Begginer Lotto</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+    body {
+      margin: 0;
+    }
+
     header {
       background-color: #4B89DC;
       padding: 24px 70px;
+
     }
     header a {
       font-family: Roboto;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+    header a:link, header a:visited {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .main {
+      box-shadow: 0px 0px 10px 0px #0000001A;
+      width: 571px;
+      border-radius: 10px;
+      margin-top: 33px;
+      overflow: hidden
+    }
+
+    .main .top {
+      background-color: #4B89DC;
+      padding: 24px 70px;
+    }
+    .main .top div {
+      font-family: Noto Sans KR;
+      text-align: center;
+      vertical-align: middle;
+      color: #fff;
+    }
+    .main .top div:first-child {
+      font-weight: 700;
+      font-size: 24px;
+    }
+    .main .top div:last-child {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .main .numbers {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 25px;
+    }
+    .main .numbers .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+
+      font-family: Noto Sans KR;
+      font-weight: 700;
+      font-size: 20px;
+      color: #fff;
+    }
+    .main #genNumber {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #4B89DC;
+      border: 0;
+      margin-bottom: 30px;
+
+      font-family: Noto Sans KR;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      vertical-align: middle;
+      color: #fff;
     }
   </style>
 </head>
@@ -18,5 +105,27 @@
   <header>
       <a href="#">비기너 로또</a>
   </header>
+  <main>
+    <div class="main">
+      <div class="top">
+        <div>로또 번호 생성기</div>
+        <div>행운의 번호를 생성해보세요!</div>
+      </div>
+      <div style="padding: 20px;">
+        <div style="font-family: Arial; font-weight: 700; font-size: 18px; margin-bottom: 16px;">당첨 번호 생성</div>
+        <div class="numbers">
+          <div class="number" style="background-color: #FBC400;">?</div>
+          <div class="number" style="background-color: #69C8F2;">?</div>
+          <div class="number" style="background-color: #FF7272;">?</div>
+          <div class="number" style="background-color: #AAAAAA;">?</div>
+          <div class="number" style="background-color: #B0D840;">?</div>
+          <div class="number" style="background-color: #B49FFF;">?</div>
+          <div class="number" style="background-color: #FF7F48;">?</div>
+        </div>
+        <button id="genNumber">번호 생성하기</button>
+        <hr>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

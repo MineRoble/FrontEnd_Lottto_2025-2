@@ -90,6 +90,8 @@
       justify-content: center;
       align-items: center;
 
+      position: relative;
+
       width: 45px;
       height: 45px;
       border-radius: 50%;
@@ -98,6 +100,20 @@
       font-weight: 700;
       font-size: 20px;
       color: #fff;
+    }
+    .main .numbers .number.star::after {
+        content: "";
+
+        position: absolute;
+        top: -7px;
+        right: -2px;
+        width: 20px;
+        height: 20px;
+        
+        background-image: url("star.png");
+        background-size: contain; /* 이미지 비율 유지 */
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .buyLotto {
@@ -138,7 +154,7 @@
           <div class="number" style="background-color: #AAAAAA;">?</div>
           <div class="number" style="background-color: #B0D840;">?</div>
           <div class="number" style="background-color: #B49FFF;">?</div>
-          <div class="number" style="background-color: #FF7F48;">?</div>
+          <div class="number star" style="background-color: #FF7F48;">?</div>
         </div>
         <button class="btn" style="margin-bottom: 30px;">번호 생성하기</button>
         <div class="buyLotto">

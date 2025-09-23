@@ -15,6 +15,21 @@
       margin: 0;
     }
 
+    .btn {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #4B89DC;
+      border: 0;
+
+      font-family: Noto Sans KR;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center;
+      vertical-align: middle;
+      color: #fff;
+    }
+
     header {
       background-color: #4B89DC;
       padding: 24px 70px;
@@ -68,7 +83,7 @@
     .main .numbers {
       display: flex;
       gap: 32px;
-      margin-bottom: 25px;
+      margin: 0 12px 25px 12px;
     }
     .main .numbers .number {
       display: flex;
@@ -84,20 +99,23 @@
       font-size: 20px;
       color: #fff;
     }
-    .main #genNumber {
-      width: 100%;
-      height: 40px;
-      border-radius: 5px;
-      background-color: #4B89DC;
-      border: 0;
-      margin-bottom: 30px;
 
-      font-family: Noto Sans KR;
-      font-weight: 700;
-      font-size: 16px;
-      text-align: center;
-      vertical-align: middle;
-      color: #fff;
+    .buyLotto {
+      border-top: 1px solid #eee;
+      padding: 23px 0 8px 0;
+    }
+
+    .buyLotto .howManyForm {
+      display: flex;
+      align-items: center;
+      gap: 6.8px;
+      margin-bottom: 11px;
+    }
+    .buyLotto .howManyForm #howMany {
+      flex-grow: 1;
+      border: 1px solid #DDDDDD;
+      border-radius: 4px;
+      padding: 5.5px
     }
   </style>
 </head>
@@ -122,8 +140,16 @@
           <div class="number" style="background-color: #B49FFF;">?</div>
           <div class="number" style="background-color: #FF7F48;">?</div>
         </div>
-        <button id="genNumber">번호 생성하기</button>
-        <hr>
+        <button class="btn" style="margin-bottom: 30px;">번호 생성하기</button>
+        <div class="buyLotto">
+          <div style="font-family: Noto Sans KR; font-weight: 700; font-size: 18px; margin-bottom: 17px;">로또 구매하기</div>
+          <div class="howManyForm">
+            <label for="howMany">구매 수량 :</label>
+            <input type="text" name="howMany" id="howMany" placeholder="구매 수량을 입력해주세요">
+          </div>
+          <div style="font-family: Noto Sans KR; font-weight: 400; font-size: 16px; margin-bottom: 23px;">총 금액: 1,000원 (1장당 1,000원)</div>
+          <button class="btn">구매하기</button>
+        </div>
       </div>
     </div>
   </main>
